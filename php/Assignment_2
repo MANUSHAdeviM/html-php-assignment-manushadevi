@@ -1,0 +1,21 @@
+<?php
+echo "\t1\t2\t3\n";
+for ($i = 1; $i <= 3; $i++) {
+    echo "$i\t";
+    for ($j = 1; $j <= 3; $j++) {
+        $result = $i / $j;
+        echo number_format($result, 2) . "\t";
+    }
+    echo "\n";
+}
+?>
+
+
+Output:
+	1	2	3
+1	1.00	0.50	0.33	
+2	2.00	1.00	0.67	
+3	3.00	1.50	1.00	
+
+
+=== Code Execution Successful ===
