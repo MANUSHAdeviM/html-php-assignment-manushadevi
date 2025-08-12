@@ -1,0 +1,41 @@
+<?php
+$str = "  Hello World! Welcome to PHP String Functions.  ";
+echo "<h3>Original String:</h3>";
+echo "'$str'<br><br>";
+$trimmed = trim($str);
+echo "<b>1. trim():</b> '$trimmed'<br>";
+echo "<b>2. strtolower():</b> " . strtolower($trimmed) . "<br>";
+echo "<b>3. strtoupper():</b> " . strtoupper($trimmed) . "<br>";
+echo "<b>4. strlen():</b> " . strlen($trimmed) . "<br>";
+echo "<b>5. str_word_count():</b> " . str_word_count($trimmed) . "<br>";
+echo "<b>6. strrev():</b> " . strrev($trimmed) . "<br>";
+echo "<b>7. strpos():</b> Position of 'PHP' is " . strpos($trimmed, "PHP") . "<br>";
+echo "<b>8. str_replace():</b> " . str_replace("World", "Everyone", $trimmed) . "<br>";
+echo "<b>9. substr():</b> " . substr($trimmed, 6, 5) . "<br>";
+echo "<b>10. str_repeat():</b> " . str_repeat("PHP! ", 3) . "<br>";
+$str1 = "apple";
+$str2 = "banana";
+echo "<b>11. strcmp():</b> Comparing 'apple' and 'banana' = " . strcmp($str1, $str2) . "<br>";
+$words = explode(" ", $trimmed);
+echo "<b>12. explode():</b> ";
+print_r($words);
+echo "<br>";
+echo "<b>13. implode():</b> " . implode(" | ", $words) . "<br>";
+?>
+
+Output:
+Original String: '  Hello World! Welcome to PHP String Functions.  '
+
+1. trim(): 'Hello World! Welcome to PHP String Functions.'
+2. strtolower(): hello world! welcome to php string functions.
+3. strtoupper(): HELLO WORLD! WELCOME TO PHP STRING FUNCTIONS.
+4. strlen(): 47
+5. str_word_count(): 7
+6. strrev(): .snoitcnuF gnirtS PHP ot emocleW !dlroW olleH
+7. strpos(): Position of 'PHP' is 25
+8. str_replace(): Hello Everyone! Welcome to PHP String Functions.
+9. substr(): World
+10. str_repeat(): PHP! PHP! PHP!
+11. strcmp(): Comparing 'apple' and 'banana' = -1
+12. explode(): Array ( [0] => Hello [1] => World! [2] => Welcome [3] => to [4] => PHP [5] => String [6] => Functions. )
+13. implode(): Hello | World! | Welcome | to | PHP | String | Functions.
