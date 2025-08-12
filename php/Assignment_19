@@ -1,0 +1,17 @@
+<?php
+function findMinMax($arr) {
+    return ["min" => min($arr), "max" => max($arr)];
+}
+
+$numbers = [10, 25, 5, 78, 32];
+$result = findMinMax($numbers);
+
+echo "Lowest: " . $result['min'] . "<br>";
+echo "Highest: " . $result['max'];
+?>
+
+
+
+output:
+Lowest: 5  
+Highest: 78
