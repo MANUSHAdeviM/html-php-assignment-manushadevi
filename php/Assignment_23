@@ -1,0 +1,31 @@
+Real-Time Example
+1. GET Example: Search Page
+<?php
+if (isset($_GET['query'])) {
+    $q = $_GET['query'];
+    echo "You searched for: $q";
+}
+?>
+
+<form method="get" action="">
+    Search: <input type="text" name="query">
+    <input type="submit" value="Search">
+</form>
+
+
+
+2. POST Example: Login Form
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];  // never shown in URL
+
+    echo "Welcome, $username!";
+}
+?>
+
+<form method="post" action="">
+    Username: <input type="text" name="username"><br>
+    Password: <input type="password" name="password"><br>
+    <input type="submit" value="Login">
+</form>
