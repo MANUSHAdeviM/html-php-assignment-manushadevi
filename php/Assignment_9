@@ -1,0 +1,13 @@
+$this = “this”; $that = “that”; $the_other = 2.2000000000;
+print(“$this,$not_set,$that+$the_other”);
+
+output:
+Fatal error: Cannot re-assign $this
+
+corrected version:
+$myvar = "this";
+$that = "that";
+$the_other = 2.2;
+print("$myvar,$not_set,$that+$the_other");
+output:
+this,,that+2.2
