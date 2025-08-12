@@ -1,0 +1,15 @@
+<?php
+function generatePassword($length = 12) {
+    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=<>?';
+    $shuffled = str_shuffle($chars);
+    $password = substr($shuffled, 0, $length);
+    
+    return $password;
+}
+echo "Generated Password: " . generatePassword(12);
+?>
+
+
+
+output:
+Generated Password: v6MBz^GO?qn%
