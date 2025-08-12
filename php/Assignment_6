@@ -1,0 +1,63 @@
+i. Using GET Method (URL Parameters)
+Page 1: form.html
+<form action="page2.php" method="get">
+  Name: <input type="text" name="username">
+  <input type="submit" value="Submit">
+</form>
+Page 2: page2.php
+<?php
+$name = $_GET['username'];
+echo "Hello, $name!";
+?>
+URL looks like:
+page2.php?username=John
+
+
+
+
+
+ ii. Using POST Method
+Page 1: form.html
+<form action="page2.php" method="post">
+  Name: <input type="text" name="username">
+  <input type="submit" value="Submit">
+</form>
+Page 2: page2.php
+<?php
+$name = $_POST['username'];
+echo "Welcome, $name!";
+?>
+
+
+
+
+
+iii. Using Sessions
+Page 1: page1.php
+<?php
+session_start();
+$_SESSION['username'] = 'Alice';
+?>
+<a href="page2.php">Go to Page 2</a>
+Page 2: page2.php
+<?php
+session_start();
+echo "Hello, " . $_SESSION['username'];
+?>
+
+
+
+
+
+ iv. Using Cookies
+Page 1: page1.php
+<?php
+setcookie("username", "Bob", time() + 3600); // 1 hour expiry
+?>
+<a href="page2.php">Go to Page 2</a>
+Page 2: page2.php
+<?php
+if(isset($_COOKIE['username'])) {
+    echo "Welcome back, " . $_COOKIE['username'];
+}
+?>
