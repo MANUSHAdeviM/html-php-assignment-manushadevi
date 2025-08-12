@@ -1,0 +1,52 @@
+1. Addition (+)
+<?php
+$a = 10;
+$b = 5;
+echo $a + $b;
+?>
+
+
+output:
+15
+
+
+
+
+2. Subtraction (-)
+<?php
+$a = 10;
+$b = 5;
+echo $a - $b; 
+?>
+
+
+output:
+5
+
+
+
+
+ 3. Multiplication (*)
+<?php
+$a = 10;
+$b = 5;
+echo $a * $b; 
+?>
+
+
+output:
+50
+
+
+
+
+ 4. Division (/)
+<?php
+$a = 10;
+$b = 5;
+echo $a / $b;
+?>
+
+
+output:
+2
