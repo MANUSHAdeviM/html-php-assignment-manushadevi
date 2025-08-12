@@ -1,0 +1,13 @@
+<?php
+$data = "The Thing will come to you soon";
+$updated = preg_replace('/\bThe\b/', 'best', $data, 1);
+
+echo "Original: $data<br>";
+echo "Updated: $updated";
+?>
+
+
+
+output:
+Original: The Thing will come to you soon  
+Updated: best Thing will come to you soon
