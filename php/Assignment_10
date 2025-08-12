@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grades</title>
+</head>
+<body>
+<h2>Student Grades Based on Marks</h2>
+<?php
+$student_marks = array(95, 82, 76, 63, 58, 45, 88, 69);
+function getGrade($mark) {
+    if ($mark >= 90) return "A+";
+    elseif ($mark >= 80) return "A";
+    elseif ($mark >= 70) return "B";
+    elseif ($mark >= 60) return "C";
+    elseif ($mark >= 50) return "D";
+    else return "F";
+}
+for ($i = 0; $i < count($student_marks); $i++) {
+    $grade = getGrade($student_marks[$i]);
+    echo "Student " . ($i + 1) . " - Marks: " . $student_marks[$i] . " - Grade: " . $grade . "<br>";
+}
+?>
+</body>
+</html>
+
+
+
+
+Output:
+Student 1 - Marks: 95 - Grade: A+
+Student 2 - Marks: 82 - Grade: A
+Student 3 - Marks: 76 - Grade: B
+Student 4 - Marks: 63 - Grade: C
+Student 5 - Marks: 58 - Grade: D
+Student 6 - Marks: 45 - Grade: F
+Student 7 - Marks: 88 - Grade: A
+Student 8 - Marks: 69 - Grade: C
