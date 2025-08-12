@@ -1,0 +1,21 @@
+<?php
+$name = "John";
+
+if (isset($name)) {
+    echo "The variable 'name' is set.<br>";
+}
+
+$age = null;
+
+if (isset($age)) {
+    echo "The variable 'age' is set.";
+} else {
+    echo "The variable 'age' is not set or is NULL.";
+}
+?>
+
+
+
+output:
+The variable 'name' is set.
+The variable 'age' is not set or is NULL.
