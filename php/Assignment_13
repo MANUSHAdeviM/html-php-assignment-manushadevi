@@ -1,0 +1,14 @@
+$sub = substr(12345, 2, 2);
+echo “sub is $sub”;
+
+ 1. substr(12345, 2, 2)
+substr() is a function that works on strings, not numbers.
+The number 12345 will be implicitly converted to a string: "12345".
+Then substr("12345", 2, 2) means:
+Start at index 2 (0-based indexing → third character)
+Take 2 characters
+"12345"
+ Index: 0 → 1, 1 → 2, 2 → 3, 3 → 4, 4 → 5
+Result: "34"
+2. Invalid Quotation Marks
+echo “sub is $sub”;
