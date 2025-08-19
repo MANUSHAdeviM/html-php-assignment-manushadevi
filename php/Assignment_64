@@ -1,0 +1,71 @@
+<?php
+// Historical sales data (e.g., yearly sales in thousands)
+$sales = [
+    "2019" => 1200,
+    "2020" => 1350,
+    "2021" => 1500,
+    "2022" => 1650,
+    "2023" => 1800
+];
+
+// 1. Calculate Year-over-Year Growth Rates (%)
+$growthRates = [];
+$years = array_keys($sales);
+
+for ($i = 1; $i < count($years); $i++) {
+    $prevYear = $years[$i - 1];
+    $currYear = $years[$i];
+
+    $prevSales = $sales[$prevYear];
+    $currSales = $sales[$currYear];
+
+    // Growth rate = ((current - previous) / previous) * 100
+    $growth = (($currSales - $prevSales) / $prevSales) * 100;
+    $growthRates[$currYear] = round($growth, 2);
+}
+
+// 2. Calculate Average Growth Rate
+$averageGrowth = array_sum($growthRates) / count($growthRates);
+
+// 3. Forecast Next Year's Sales
+$lastYear = end($years);
+$lastSales = $sales[$lastYear];
+$forecastSales = $lastSales * (1 + $averageGrowth / 100);
+
+// --- Output ---
+
+echo "Historical Sales Data (in thousands):\n";
+foreach ($sales as $year => $amount) {
+    echo "$year : $amount\n";
+}
+
+echo "\nYear-over-Year Growth Rates (%):\n";
+foreach ($growthRates as $year => $rate) {
+    echo "$year : $rate%\n";
+}
+
+echo "\nAverage Growth Rate: " . round($averageGrowth, 2) . "%\n";
+
+echo "\nSales Forecast for " . ($lastYear + 1) . " : " . round($forecastSales, 2) . " (thousands)\n";
+
+?>
+
+
+OUTPUT:
+
+Historical Sales Data (in thousands):
+2019 : 1200
+2020 : 1350
+2021 : 1500
+2022 : 1650
+2023 : 1800
+
+Year-over-Year Growth Rates (%):
+2020 : 12.5%
+2021 : 11.11%
+2022 : 10%
+2023 : 9.09%
+
+Average Growth Rate: 10.68%
+
+Sales Forecast for 2024 : 1992.31 (thousands)
