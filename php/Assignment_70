@@ -1,0 +1,43 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get user input
+    $input = $_POST['numbers'];
+
+    // Convert input string to array (split by space)
+    $numbersArray = explode(" ", $input);
+
+    // Display stored array
+    echo "Numbers stored in array: <br>";
+    foreach ($numbersArray as $num) {
+        echo $num . "<br>";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Input</title>
+</head>
+<body>
+    <form method="post">
+        Enter numbers separated by space: 
+        <input type="text" name="numbers" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+
+
+Input:
+10 20 30 40 50
+
+
+Output:
+Numbers stored in array:
+10
+20
+30
+40
+50
