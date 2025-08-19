@@ -1,0 +1,27 @@
+<?php
+function divide($a, $b) {
+    if ($b == 0) {
+        // Manually throw an exception
+        throw new Exception("Division by zero is not allowed.");
+    }
+    return $a / $b;
+}
+
+try {
+    // Example values
+    $numerator = 10;
+    $denominator = 0;
+
+    // Try dividing
+    $result = divide($numerator, $denominator);
+    echo "Result: $result";
+    
+} catch (Exception $e) {
+    // Catch and display the error
+    echo "Caught exception: " . $e->getMessage();
+}
+?>
+
+
+OUTPUT:
+Caught exception: Division by zero is not allowed.
