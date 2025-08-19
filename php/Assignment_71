@@ -1,0 +1,15 @@
+ File Handling Modes in PHP
+
+
+| Mode   | Description                                                                                   |
+| ------ | --------------------------------------------------------------------------------------------- |
+| `'r'`  | **Read-only**. Starts at the beginning of the file. Fails if the file doesn't exist.          |
+| `'r+'` | **Read and write**. Starts at the beginning. Fails if file doesn't exist.                     |
+| `'w'`  | **Write-only**. Truncates (clears) the file to zero length. Creates file if it doesn't exist. |
+| `'w+'` | **Read and write**. Truncates file to zero length. Creates file if not found.                 |
+| `'a'`  | **Write-only**. Appends to the end of the file. Creates file if not found.                    |
+| `'a+'` | **Read and write**. Starts at end of file for writing. Creates file if not found.             |
+| `'x'`  | **Write-only**. Creates new file. Fails if file already exists.                               |
+| `'x+'` | **Read and write**. Creates new file. Fails if file exists.                                   |
+| `'c'`  | **Write-only**. Creates file if not exists. Doesn't truncate.                                 |
+| `'c+'` | **Read and write**. Creates file if not exists. Doesn't truncate.                             |
