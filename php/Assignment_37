@@ -1,0 +1,36 @@
+PUSH:
+<?php
+$fruits = array("Apple", "Banana");
+array_push($fruits, "Cherry", "Mango");
+print_r($fruits);
+?>
+
+OUTPUT:
+
+Array
+(
+    [0] => Apple
+    [1] => Banana
+    [2] => Cherry
+    [3] => Mango
+)
+
+
+POP:
+
+<?php
+$fruits = array("Apple", "Banana", "Cherry");
+$lastFruit = array_pop($fruits);
+echo "Removed: $lastFruit\n";
+print_r($fruits);
+?>
+
+
+OUTPUT:
+
+Removed: Cherry
+Array
+(
+    [0] => Apple
+    [1] => Banana
+)
