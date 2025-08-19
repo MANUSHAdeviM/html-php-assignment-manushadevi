@@ -1,0 +1,52 @@
+<?php
+
+// Original array
+$inputArray = ["Apple", "BANANA", "Cherry", "daTE"];
+
+// Convert all elements to lowercase
+$lowercaseArray = array_map('strtolower', $inputArray);
+
+// Convert all elements to uppercase
+$uppercaseArray = array_map('strtoupper', $inputArray);
+
+// Output results
+echo "Original Array:\n";
+print_r($inputArray);
+
+echo "\nLowercase Array:\n";
+print_r($lowercaseArray);
+
+echo "\nUppercase Array:\n";
+print_r($uppercaseArray);
+
+?>
+
+
+OUTPUT:
+
+Original Array:
+Array
+(
+    [0] => Apple
+    [1] => BANANA
+    [2] => Cherry
+    [3] => daTE
+)
+
+Lowercase Array:
+Array
+(
+    [0] => apple
+    [1] => banana
+    [2] => cherry
+    [3] => date
+)
+
+Uppercase Array:
+Array
+(
+    [0] => APPLE
+    [1] => BANANA
+    [2] => CHERRY
+    [3] => DATE
+)
