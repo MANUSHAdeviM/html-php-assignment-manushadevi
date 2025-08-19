@@ -1,0 +1,28 @@
+<?php
+// Array of strings
+$strings = array(
+    "I love programming in PHP",
+    "JavaScript is versatile",
+    "PHP is great for web development",
+    "Python is popular for data science"
+);
+
+// The substring we want to search for
+$search = "PHP";
+
+// Loop through each string and check if it contains the search term
+foreach ($strings as $str) {
+    if (strpos($str, $search) !== false) {
+        echo "'$search' found in: $str<br>";
+    } else {
+        echo "'$search' not found in: $str<br>";
+    }
+}
+?>
+
+OUTPUT:
+
+'PHP' found in: I love programming in PHP
+'PHP' not found in: JavaScript is versatile
+'PHP' found in: PHP is great for web development
+'PHP' not found in: Python is popular for data science
