@@ -1,0 +1,33 @@
+<?php
+// Input sentence
+$sentence = "PHP is powerful. PHP is popular. PHP is easy to learn and easy to use.";
+
+// 1. Convert to lowercase for case-insensitive comparison
+$sentence = strtolower($sentence);
+
+// 2. Tokenize sentence into words using regular expression
+$words = preg_split("/[^a-zA-Z]+/", $sentence, -1, PREG_SPLIT_NO_EMPTY);
+
+// 3. Count word frequencies
+$wordCount = array_count_values($words);
+
+// 4. Display word frequencies
+echo "Word Frequency Table:\n";
+foreach ($wordCount as $word => $count) {
+    echo "$word : $count\n";
+}
+?>
+
+
+OUTPUT:
+
+Word Frequency Table:
+php : 3
+is : 3
+powerful : 1
+popular : 1
+easy : 2
+to : 2
+learn : 1
+and : 1
+use : 1
