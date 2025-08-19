@@ -1,0 +1,36 @@
+<?php
+function searchValueInAssocArray(array $arr, $searchValue) {
+    $foundKeys = [];
+
+    foreach ($arr as $key => $value) {
+        if ($value === $searchValue) {
+            $foundKeys[] = $key;
+        }
+    }
+
+    // Return keys if found, otherwise null
+    return !empty($foundKeys) ? $foundKeys : null;
+}
+
+// Example usage
+$assocArray = [
+    "first" => 100,
+    "second" => 200,
+    "third" => 100,
+    "fourth" => 300
+];
+
+$search = 100;
+$result = searchValueInAssocArray($assocArray, $search);
+
+if ($result !== null) {
+    echo "Value $search found at key(s): " . implode(", ", $result);
+} else {
+    echo "Value $search not found in the array.";
+}
+?>
+
+
+OUTPUT:
+
+Value 100 found at key(s): first, third
